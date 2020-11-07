@@ -5,7 +5,7 @@ void setup()
   for(int i = 0; i < n.length;i++)
   n[i] = new Particle();
   n[0] = new OddballParticle();
-  
+  n[1] = new OddballParticle();
 }
 void draw()
 {
@@ -47,13 +47,14 @@ class OddballParticle extends Particle
   
   void show(){
    fill(pColor);
-   square((float)x,(float)y,50);
+   ellipse((float)x,(float)y,50,80);
   }
   void move(){
     x = x + Math.cos(angle) / speed;
     y = y + Math.sin(angle) / speed;
   }
 }
+
 
 
 
